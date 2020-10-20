@@ -28,22 +28,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ID："
-                android:textSize="28sp" />
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/tv_task_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="010001" />
+                android:text="010001"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="260dp"
+            android:layout_gravity="center"
             android:layout_margin="10dp"
             android:scaleType="centerCrop"
-            android:layout_gravity="center"
-            android:src="@mipmap/ic_launcher"/>
+            android:src="@mipmap/ic_launcher" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -54,12 +55,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="任务："
-                android:textSize="28sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="任务1" />
+                android:layout_marginBottom="10dp"
+                android:text="任务1时啊啊第一爱上夜泊ui开除我吧我u弄i那我啊接受i去啊今晚你饿就饿 丢成为u气雾剂气雾剂哦"
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -71,12 +74,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="状态："
-                android:textSize="28sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="已完成" />
+                android:text="已完成"
+                android:textSize="14sp" />
         </LinearLayout>
 
     </LinearLayout>
