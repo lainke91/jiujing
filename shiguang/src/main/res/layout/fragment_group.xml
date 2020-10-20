@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GroupActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@mipmap/chevy_home_plate" />
+
+        <TextView
+            android:id="@+id/tv_team_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="15dp"
+            android:text="还没有取队名"
+            android:textColor="@android:color/white"
+            android:textSize="23sp" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="30dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="172dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/button_login"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="开启旅程"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+</LinearLayout>

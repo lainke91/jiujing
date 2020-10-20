@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaskActivity">
+
+    <com.yalantis.library.Koloda
+        android:id="@+id/koloda"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:koloda_card_layout="@layout/item_koloda" >
+
+    </com.yalantis.library.Koloda>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:paddingLeft="55dp"
+        android:paddingRight="55dp"
+        android:textSize="14sp"
+        android:text="提示：完成任务后请找裁判（贾志鹏、孙靖浙、刘瑜、杨非、王志远）获取完成码"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
