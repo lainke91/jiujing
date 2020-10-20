@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:background="#ffffff">
 
-        <LinearLayout
+        <LinearLayout android:id="@+id/ly_captain"
             android:layout_width="match_parent"
             android:layout_height="260dp"
             android:background="#f1b136"
@@ -39,7 +39,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
+        <LinearLayout android:id="@+id/ly_team"
             android:layout_width="match_parent"
             android:layout_height="260dp"
             android:layout_marginTop="260dp"

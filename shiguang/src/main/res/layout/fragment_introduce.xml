@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <LinearLayout
+                <LinearLayout android:id="@+id/ly_item1"
                     android:layout_width="match_parent"
                     android:layout_height="260dp"
                     android:background="#885f7f"
@@ -37,7 +37,7 @@
                         app:srcCompat="@mipmap/icon_hao" />
 
                     <TextView
-                        android:id="@+id/textView2"
+                        android:id="@+id/tv_title1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
@@ -48,7 +48,7 @@
 
                 </LinearLayout>
 
-                <LinearLayout
+                <LinearLayout android:id="@+id/ly_item2"
                     android:layout_width="match_parent"
                     android:layout_height="260dp"
                     android:background="#d0c490"
@@ -63,7 +63,7 @@
                         app:srcCompat="@mipmap/icon_gun" />
 
                     <TextView
-                        android:id="@+id/textView3"
+                        android:id="@+id/tv_title2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
@@ -73,7 +73,7 @@
                         android:textStyle="normal" />
                 </LinearLayout>
 
-                <LinearLayout
+                <LinearLayout android:id="@+id/ly_item3"
                     android:layout_width="match_parent"
                     android:layout_height="260dp"
                     android:background="#13B0A5"
@@ -89,7 +89,7 @@
                         app:srcCompat="@mipmap/icon_dy" />
 
                     <TextView
-                        android:id="@+id/textView8"
+                        android:id="@+id/tv_title3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
@@ -99,7 +99,7 @@
                         android:textStyle="normal" />
                 </LinearLayout>
 
-                <LinearLayout
+                <LinearLayout android:id="@+id/ly_item4"
                     android:layout_width="match_parent"
                     android:layout_height="260dp"
                     android:background="#eb6460"
@@ -114,7 +114,7 @@
                         app:srcCompat="@mipmap/icon_lang" />
 
                     <TextView
-                        android:id="@+id/textView9"
+                        android:id="@+id/tv_title4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"

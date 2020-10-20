@@ -5,18 +5,17 @@ import android.graphics.Canvas;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
 
+import com.jike.jiujing.base.BaseFragment;
+
+import butterknife.OnClick;
 import yalantis.com.sidemenu.interfaces.ScreenShotable;
 
 /**
  * Created by sjgb8d on 2020/10/12
  */
-public class TaskFragment extends Fragment implements ScreenShotable {
+public class TaskFragment extends BaseFragment implements ScreenShotable {
     private View containerView;
     private Bitmap bitmap;
 
@@ -25,11 +24,15 @@ public class TaskFragment extends Fragment implements ScreenShotable {
         return taskFragment;
     }
 
-    @Nullable
+
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_task, container, false);
-        return rootView;
+    protected int getLayoutId() {
+        return R.layout.fragment_task;
+    }
+
+    @Override
+    protected void initView() {
+        super.initView();
     }
 
     @Override
@@ -58,5 +61,15 @@ public class TaskFragment extends Fragment implements ScreenShotable {
     @Override
     public Bitmap getBitmap() {
         return bitmap;
+    }
+
+    @OnClick(R.id.ly_captain)
+    public void onCaptainClick() {
+        startActivity(TaskActivity.class);
+    }
+
+    @OnClick(R.id.ly_team)
+    public void onTeamClick() {
+        startActivity(TaskActivity.class);
     }
 }
