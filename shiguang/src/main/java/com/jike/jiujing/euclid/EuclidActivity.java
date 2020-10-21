@@ -195,7 +195,7 @@ public abstract class EuclidActivity extends BaseActivity {
      * @param item - data from adapter, that will be set into overlay view.
      */
     private void setProfileDetailsInfo(Map<String, Object> item) {
-        mTextViewProfileName.setText("游戏名称");
+        mTextViewProfileName.setText((String) item.get(EuclidListAdapter.KEY_NAME));
         mTextViewProfileDescription.setText((String) item.get(EuclidListAdapter.KEY_DESCRIPTION_FULL));
     }
 
@@ -481,7 +481,7 @@ public abstract class EuclidActivity extends BaseActivity {
                         sScreenWidth / 2 - dpToPx(getCircleRadiusDp() * 2),
                         sProfileImageHeight / 2 - dpToPx(getCircleRadiusDp() * 2)),
                 new float[]{radius, radius, radius, radius, radius, radius, radius, radius}));
-        overlay.getPaint().setColor(Color.GRAY);
+        overlay.getPaint().setColor(getResources().getColor(R.color.euclid_background));
 
         return overlay;
     }

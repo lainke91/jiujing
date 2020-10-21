@@ -6,7 +6,7 @@
 
     <FrameLayout
         android:id="@+id/toolbar_list"
-        android:background="@color/orange"
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="50dp">
 
@@ -14,7 +14,7 @@
             android:textColor="@color/black"
             android:layout_gravity="center"
             android:fontFamily="sans-serif-bold"
-            android:textSize="@dimen/text_size_toolbar_title"
+            android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -22,16 +22,16 @@
 
     <ListView
         android:id="@+id/list_view"
-        android:divider="@drawable/list_divider"
+
         android:layout_below="@+id/toolbar_list"
-        android:background="@color/gray"
+        android:background="@color/line_grey"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/euclid_list_item" />
 
     <RelativeLayout
         android:id="@+id/toolbar_profile"
-        android:background="@color/gray"
+        android:background="@color/line_grey"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -45,7 +45,7 @@
             android:layout_centerVertical="true"
             android:layout_gravity="center"
             android:padding="15dp"
-            android:src="@drawable/ic_arrow_left" />
+            android:src="@mipmap/back" />
 
         <RelativeLayout
             android:layout_width="200dp"
@@ -74,7 +74,7 @@
             android:textColor="@color/gray"
             tools:text="SOPHIA"
             android:fontFamily="sans-serif-light"
-            android:textSize="32sp"
+            android:textSize="24sp"
             android:layout_margin="10dp" />
 
         <ScrollView
@@ -91,7 +91,7 @@
                 android:textColor="@color/gray"
                 tools:text="@string/lorem_ipsum_long"
                 android:fontFamily="sans-serif"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
         </ScrollView>
 

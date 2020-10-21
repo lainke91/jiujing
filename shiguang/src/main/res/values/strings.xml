@@ -9,17 +9,64 @@
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
         nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
     <string-array name="array_names">
-        <item>"Anastasia Druzhinina"</item>
-        <item>"Andriy Hristyan"</item>
-        <item>"Dmitriy Dovbnya"</item>
-        <item>"Dmitry Denisenko"</item>
-        <item>"Eduard Baev"</item>
-        <item>"Iliya Bershadskiy"</item>
-        <item>"Kirill Penzykov"</item>
-        <item>"Konstantin Rudenko"</item>
-        <item>"Oleksii Shliama"</item>
-        <item>"Pavel Apisov"</item>
-        <item>"Vadim Ooleynik"</item>
+        <item>"打弹珠"</item>
+        <item>"跳皮筋"</item>
+        <item>"摔方宝"</item>
+        <item>"拍洋画"</item>
+        <item>"挑竹签"</item>
+        <item>"抓石子"</item>
+        <item>"呼啦圈"</item>
+    </string-array>
+    <string-array name="array_shorts">
+        <item>"打弹珠，又叫“弹玻璃球”，一种流行于20世纪下半叶的游戏"</item>
+        <item>"跳皮筋，也叫跳猴皮筋，约流行在20世纪50至90年代"</item>
+        <item>"摔方宝，河北方言叫“来啪儿”，也叫打纸板"</item>
+        <item>"拍洋画，在北方也叫“扇洋片”，是一种在20世纪80年代流行很广的游戏"</item>
+        <item>"挑竹签，又叫“挑签”，以获得最多竹签为目的的小游戏"</item>
+        <item>"抓石子，又称“抓羊拐”，锻炼反应能力的小游戏"</item>
+        <item>"呼啦圈又称健身圈，20世纪50年代流行于欧美、澳日等国"</item>
+    </string-array>
+    <string-array name="array_longs">
+        <item>"报名消耗1点体力值
+1、在地上画两个圆圈作为比赛场地
+2、每人分配5颗弹珠，抽签决定比赛顺序
+3、按顺序由外圈向内圈发射弹珠，碰到其他弹珠后可继续发射
+最终获得内圈中自己颜色弹珠个数的分值"</item>
+        <item>"报名消耗1点体力值
+1、双脚踏在第一根皮筋上
+2、双脚踏在第二根皮筋上
+3、转身，用膝盖顶住第二根皮筋
+4、用脚带着第二根皮筋跳到第一根皮筋另一侧
+全程不能用手，三次机会，可以自选高度挑战；
+挑战成功膝盖高度获得1分；挑战成功腰高度获得2分；挑战成功胸高度获得3分；
+完成了基础动作外的其他高难度动作可额外加1分"</item>
+        <item>"报名消耗1点体力值
+1、每人自折三个方宝，抽签决定比赛顺序
+2、在地上画一个圆圈作为比赛场地
+3、比赛开始时，每人放一个方宝在场地中，然后按顺序摔方宝
+4、把其他人的方宝摔翻，或者摔出场地（自身的1/2以上在场地外），则赢得这个方宝，并可继续摔一次
+5、自己的轮次如果方宝出界，则失去这张方宝，并可以继续摔一轮
+当两人输完方宝，游戏结束；输完的获得1分；获得最多方宝的人获得3分；其他人获得2分"</item>
+        <item>"报名消耗1点体力值
+1、抽签决定比赛顺序
+2、比赛开始时，裁判放置1张洋画在桌上，按顺序轮流拍打桌子或洋画
+3、每人一次机会然后轮换，拍翻洋画可赢得该洋画，然后裁判补放一张
+4、6轮后游戏结束
+获得最多洋画的获得3分；获得最少洋画的获得1分；其他人获得2分"</item>
+        <item>"报名消耗1点体力值
+1、抽签决定比赛顺序，三人一组
+2、比赛开始，裁判随机撒下竹签
+3、参赛者依次捡竹签，拿到竹签或者动了不止一根竹签轮换下一个人
+比赛结束获得最多竹签的人获得3分；获得第二多竹签的人获得2分；获得最少竹签的人获得1分"</item>
+        <item>"报名消耗1点体力值
+1、参赛者撒下五颗石子，选取其中一颗抛向空中，趁石子未落地，抓起地上一颗石子，然后接住刚才向上抛的石子；然后继续，直到抓起所有石子
+2、同样的规则，一次要抓起两颗、三颗、四颗石子
+3、过程中不能碰到其他的石子
+两次机会，挑战成功获得3分，挑战失败获得1分"</item>
+        <item>"报名消耗1点体力值
+1、转动呼啦圈，一圈计数+1
+2、两次挑战机会，取较高者
+转动15圈以下获得1分；转动30圈以下获得2分；转动30圈以上获得3分"</item>
     </string-array>
 
 

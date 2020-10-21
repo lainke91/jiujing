@@ -143,6 +143,8 @@
     <color name="btnRequest">#ffbf12</color>
 
     <color name="black_overlay">#66000000</color>
+
+    <color name="euclid_background">#ffbc9a</color>
 </resources>
 
 
