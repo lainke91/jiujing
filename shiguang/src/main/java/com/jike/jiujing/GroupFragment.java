@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.jike.jiujing.Adapter.NameAdapter;
+import com.jike.jiujing.base.BaseFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,9 +22,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-public class GroupFragment extends Fragment {
+public class GroupFragment extends BaseFragment {
     private List<String> nameList = new ArrayList<>();
-    private Unbinder unbinder;
 
     @BindView(R.id.recycle_name)
     RecyclerView recyclerView;
@@ -35,11 +35,14 @@ public class GroupFragment extends Fragment {
         return new GroupFragment();
     }
 
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_group, container, false);
-        unbinder = ButterKnife.bind(this, view);
+    protected int getLayoutId() {
+        return R.layout.fragment_group;
+    }
+
+    @Override
+    protected void initView() {
+        super.initView();
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,13 +55,6 @@ public class GroupFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         NameAdapter nameAdapter = new NameAdapter(nameList);
         recyclerView.setAdapter(nameAdapter);
-        return view;
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
     }
 
     private void initTeamMember() {
@@ -70,7 +66,5 @@ public class GroupFragment extends Fragment {
         nameList.add("何丢");
         nameList.add("谢草草");
         nameList.add("丁卯");
-
-
     }
 }

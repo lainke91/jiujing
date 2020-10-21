@@ -7,18 +7,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.jike.jiujing.R;
+import com.jike.jiujing.common.entry.Task;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class TaskAdapter extends BaseAdapter {
     private Context context;
-    private List<Integer> dataList = new ArrayList();
+    private List<Task> dataList = new ArrayList();
 
 
-    public TaskAdapter(Context context, List<Integer> dataList) {
+    public TaskAdapter(Context context, List<Task> dataList) {
         this.context = context;
         this.dataList = dataList;
     }
@@ -29,7 +33,7 @@ public class TaskAdapter extends BaseAdapter {
     }
 
     @Override
-    public Integer getItem(int position) {
+    public Task getItem(int position) {
         return dataList.get(position);
     }
 
@@ -42,8 +46,11 @@ public class TaskAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         DataViewHolder holder;
         if (convertView == null) {
-            convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_koloda, parent, false);
+            convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_task, parent, false);
             holder = new DataViewHolder(convertView);
+            holder.tvTaskId = convertView.findViewById(R.id.tv_task_id);
+            holder.tvTaskTitle = convertView.findViewById(R.id.tv_task_title);
+            holder.ivTaskImg = convertView.findViewById(R.id.iv_task_img);
             convertView.setTag(holder);
         } else {
             holder = (DataViewHolder)convertView.getTag();
@@ -56,17 +63,19 @@ public class TaskAdapter extends BaseAdapter {
 
     class DataViewHolder extends RecyclerView.ViewHolder {
 
+        private TextView tvTaskId;
+        private TextView tvTaskTitle;
+        private ImageView ivTaskImg;
+
+
         public DataViewHolder(@NonNull View itemView) {
             super(itemView);
-
         }
 
-        public void bindData(Context context, Integer data) {
-//            val transforms = RequestOptions().transforms(CenterCrop(), RoundedCorners(20))
-//            Glide.with(context)
-//                    .load(data)
-//                    .apply(transforms)
-//                    .into(picture)
+        public void bindData(Context context, Task data) {
+            tvTaskId.setText(data.getTaskId());
+            tvTaskTitle.setText(data.getTaskTitle());
+            ivTaskImg.setImageDrawable(data.getTaskImg());
         }
 
     }

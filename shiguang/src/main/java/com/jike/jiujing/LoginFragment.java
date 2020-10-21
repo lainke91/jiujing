@@ -1,32 +1,33 @@
 package com.jike.jiujing;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.text.TextUtils;
 import android.widget.EditText;
 
+import com.jike.jiujing.base.BaseFragment;
+import com.jike.jiujing.common.entry.CaptainUser;
+import com.jike.jiujing.common.entry.ResultData;
+import com.jike.jiujing.common.param.LoginParam;
+import com.jike.jiujing.common.service.ApiLoader;
+import com.jike.jiujing.common.service.Callback;
+import com.jike.jiujing.common.utils.ToastUtils;
+
+
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
 
 /**
  * Created by sjgb8d on 2020/9/11
  */
-public class LoginFragment extends Fragment {
+public class LoginFragment extends BaseFragment {
 
-    public final static String TAG = "Login";
-    private LoginFragmentInterface mListener;
-    private Unbinder unbinder;
+    private LoginFragmentInterface listener;
 
     @BindView(R.id.tv_account)
-    EditText mTvAccount;
+    EditText tvAccount;
     @BindView(R.id.tv_password)
-    EditText mTvPassword;
+    EditText tvPassword;
 
 
     public static LoginFragment newInstance() {
@@ -36,25 +37,38 @@ public class LoginFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mListener = (LoginFragmentInterface) getActivity();
-    }
-
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_login, container, false);
-        unbinder = ButterKnife.bind(this, view);
-        return view;
+        listener = (LoginFragmentInterface) getActivity();
     }
 
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
+    protected int getLayoutId() {
+        return R.layout.fragment_login;
     }
 
     @OnClick(R.id.button_login)
     void onClick() {
-        mListener.onLoginClick();
+        listener.onLoginClick();
+
+//        String account = tvAccount.getText().toString();
+//        String password = tvPassword.getText().toString();
+//        if(TextUtils.isEmpty(account)){
+//            ToastUtils.show("请输入账号");
+//            return;
+//        }
+//        if(TextUtils.isEmpty(password)){
+//            ToastUtils.show("请输入密码");
+//            return;
+//        }
+//        LoginParam loginParam = new LoginParam(account, password);
+//        new ApiLoader().login(loginParam).subscribe(new Callback<ResultData<CaptainUser>>(){
+//            @Override
+//            public void onSuccess (ResultData<CaptainUser> result) {
+//                if(result.isSuccess()) {
+//                    listener.onLoginClick();
+//                } else {
+//                    ToastUtils.show(result.getMessage());
+//                }
+//            }
+//        });
     }
 }

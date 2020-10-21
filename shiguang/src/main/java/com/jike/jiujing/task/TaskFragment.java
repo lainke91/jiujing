@@ -1,4 +1,4 @@
-package com.jike.jiujing;
+package com.jike.jiujing.task;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.View;
 
+import com.jike.jiujing.R;
 import com.jike.jiujing.base.BaseFragment;
 
 import butterknife.OnClick;
@@ -65,11 +66,11 @@ public class TaskFragment extends BaseFragment implements ScreenShotable {
 
     @OnClick(R.id.ly_captain)
     public void onCaptainClick() {
-        startActivity(TaskActivity.class);
+        TaskActivity.go(currentContext, true);
     }
 
     @OnClick(R.id.ly_team)
     public void onTeamClick() {
-        startActivity(TaskActivity.class);
+        TaskActivity.go(currentContext, false);
     }
 }

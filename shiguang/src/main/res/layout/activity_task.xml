@@ -4,15 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TaskActivity">
+    tools:context=".task.TaskActivity">
 
     <com.yalantis.library.Koloda
         android:id="@+id/koloda"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:koloda_card_layout="@layout/item_koloda" >
-
-    </com.yalantis.library.Koloda>
+        app:koloda_card_layout="@layout/item_task" />
 
     <TextView
         android:id="@+id/textView5"

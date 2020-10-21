@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string-array name="captain_task_id">
+        <item>000001</item>
+        <item>000002</item>
+        <item>000003</item>
+        <item>000004</item>
+        <item>000005</item>
+        <item>000006</item>
+        <item>000007</item>
+        <item>000008</item>
+        <item>000009</item>
+        <item>000010</item>
+        <item>000011</item>
+        <item>000012</item>
+        <item>000013</item>
+        <item>000014</item>
+    </string-array>
+
+    <string-array name="captain_task_title">
+        <item>笑着和陈总握手并拍照，照片中要出现红色的物体/3的水</item>
+        <item>通过任一社交平台和王瑞成为好友并对话，对话中要出现商业互捧</item>
+        <item>帮助王伟力完成单腿下蹲动作，并在一棵大树下拍照</item>
+        <item>和陈元森一起吃东西并拍照，照片中要有花有草有树有水并且没有其他人</item>
+        <item>和舒畅一起找到五种球形的物体，蹲下一起拍张美美的照片</item>
+        <item>鼓励何颖翻花绳，成功的翻出降落伞，并在太阳下合照</item>
+        <item>和杨威一起想办法，实现一个手机屏幕上只显示杨，一个手机上只显示威，然后合照</item>
+        <item>通过任一社交平台和梁经理成为好友并对话，对话中要出现商业互捧</item>
+        <item>笑着和蒋艳拉钩并拍照，照片中要出现1/2黄色的物体</item>
+        <item>和石扬一起找到五种长方体的物体，踮着脚一起拍张美美的照片</item>
+        <item>和钟仕杰一起吃东西并拍照，照片中要有红色绿色黄色蓝色紫色</item>
+        <item>鼓励邹黎明完成单腿下蹲动作，并在太阳下拍照</item>
+        <item>鼓励方涛翻花绳，成功的翻出大桥，并在一颗大树下合照</item>
+        <item>和厉超一起想办法，找到一个只有一面的物体，并开心的合照</item>
+    </string-array>
+
+    <array name="captain_task_img">
+        <item>@drawable/task000001</item>
+        <item>@drawable/task000002</item>
+        <item>@drawable/task000003</item>
+        <item>@drawable/task000004</item>
+        <item>@drawable/task000005</item>
+        <item>@drawable/task000006</item>
+        <item>@drawable/task000007</item>
+        <item>@drawable/task000002</item>
+        <item>@drawable/task000009</item>
+        <item>@drawable/task000010</item>
+        <item>@drawable/task000015</item>
+        <item>@drawable/task000012</item>
+        <item>@drawable/task000013</item>
+        <item>@drawable/task000014</item>
+    </array>
+
+    <string-array name="team_task_id">
+        <item>010001</item>
+        <item>010002</item>
+        <item>010003</item>
+        <item>010004</item>
+        <item>010005</item>
+        <item>010006</item>
+        <item>010007</item>
+        <item>010008</item>
+        <item>010009</item>
+        <item>010010</item>
+        <item>010011</item>
+        <item>010012</item>
+    </string-array>
+
+    <string-array name="team_task_title">
+        <item>完成团队合照，照片中要出现1/3的水</item>
+        <item>拍一张好看的照片，照片中人的名字要包含金木水火土</item>
+        <item>拍一张好看的照片，照片中人的名字要包含五种动物</item>
+        <item>拍一张好看的照片，照片中人的年龄加起来刚好100岁</item>
+        <item>拍一张好看的照片，照片中要出五种植物</item>
+        <item>拍一张好看的照片，照片中人的工号要包含0-9所有数字</item>
+        <item>拍一张好看的照片，照片中包含五个不同年份入职的人</item>
+        <item>列出七个20世纪的电视节目名称，并集体签名</item>
+        <item>列出七个20世纪的动画片名称，并集体签名</item>
+        <item>列出七个20世纪的电视剧名称，并集体签名</item>
+        <item>列出七个20世纪流行的游戏名称，并集体签名</item>
+        <item>列出七首20世纪流行的歌曲名称，并集体签名</item>
+    </string-array>
+
+    <array name="team_task_img">
+        <item>@drawable/andriy</item>
+        <item>@drawable/andriy</item>
+        <item>@drawable/andriy</item>
+        <item>@drawable/andriy</item>
+        <item>@drawable/andriy</item>
+        <item>@drawable/andriy</item>
+        <item>@drawable/andriy</item>
+        <item>@drawable/andriy</item>
+        <item>@drawable/andriy</item>
+        <item>@drawable/andriy</item>
+        <item>@drawable/andriy</item>
+        <item>@drawable/andriy</item>
+    </array>
+
+
+</resources>

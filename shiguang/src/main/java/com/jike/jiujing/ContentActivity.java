@@ -2,7 +2,6 @@ package com.jike.jiujing;
 
 import android.animation.Animator;
 import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.support.v4.widget.DrawerLayout;
@@ -16,6 +15,9 @@ import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.jike.jiujing.signin.SignInFragment;
+import com.jike.jiujing.task.TaskFragment;
 
 import java.util.ArrayList;
 import java.util.List;

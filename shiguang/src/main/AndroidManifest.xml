@@ -15,7 +15,7 @@
         android:roundIcon="@mipmap/shiguang"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".TaskActivity"></activity>
+        <activity android:name=".task.TaskActivity"></activity>
         <activity android:name=".ContentActivity"></activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".GameListActivity" />
