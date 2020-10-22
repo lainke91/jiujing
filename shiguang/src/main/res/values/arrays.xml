@@ -41,6 +41,7 @@
         <item>000037</item>
         <item>000038</item>
         <item>000039</item>
+        <item>000040</item>
     </string-array>
 
     <string-array name="captain_task_code">
@@ -82,6 +83,7 @@
         <item>436454</item>
         <item>967443</item>
         <item>993125</item>
+        <item>786578</item>
     </string-array>
 
     <string-array name="captain_task_title">
@@ -118,11 +120,12 @@
         <item>帮助霍潇逸完成单腿下蹲动作，并在一个圆柱形物体旁拍照</item>
         <item>和肖建宏一起找到五种长方体的物体，并一起合照</item>
         <item>鼓励王廷元翻花绳，成功的翻出大桥，并在一个黄色物体旁合照</item>
-        <item>和陈金海一起找到五种圆柱体的物体，并一起合照</item>
+        <item>笑着和蔺总握手并拍照，照片中要出现紫色的物体</item>
         <item>和孙勇祥笑着合照，照片中要出现1/3的红色</item>
         <item>帮助扶鑫完成单腿下蹲动作，并在一种食物旁拍照</item>
         <item>和邹雅琴合照，照片中要有红色绿色黄色蓝色紫色</item>
         <item>通过任一社交平台和刘超雄成为好友并对话，对话中要出现商业互捧</item>
+        <item>和张梦煜一起想办法，找到一个有三面的物体，并开心的合照</item>
     </string-array>
 
     <array name="captain_task_img">
@@ -159,11 +162,12 @@
         <item>@drawable/task000003</item>
         <item>@drawable/task000016</item>
         <item>@drawable/task000013</item>
-        <item>@drawable/task000016</item>
+        <item>@drawable/task000001</item>
         <item>@drawable/task000036</item>
         <item>@drawable/task000012</item>
         <item>@drawable/task000015</item>
         <item>@drawable/task000002</item>
+        <item>@drawable/task010025</item>
     </array>
 
     <string-array name="team_task_id">
@@ -254,7 +258,7 @@
         <item>找出五种植物，并拍照</item>
         <item>找出五种动物，并拍照</item>
         <item>找出五种玩具，并拍照</item>
-        <item>找出五种手机型号，并拍照</item>
+        <item>找出五种手机品牌，并拍照</item>
         <item>找出五种光源，并拍照</item>
         <item>找出五种计时器，并拍照</item>
         <item>偷拍一张好看的照片，需要能证明是偷拍的</item>
