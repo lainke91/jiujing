@@ -43,6 +43,47 @@
         <item>000039</item>
     </string-array>
 
+    <string-array name="captain_task_code">
+        <item>146963</item>
+        <item>076431</item>
+        <item>943589</item>
+        <item>076434</item>
+        <item>137943</item>
+        <item>943425</item>
+        <item>248053</item>
+        <item>073431</item>
+        <item>016431</item>
+        <item>953589</item>
+        <item>096434</item>
+        <item>107943</item>
+        <item>913425</item>
+        <item>278053</item>
+        <item>136963</item>
+        <item>566431</item>
+        <item>773589</item>
+        <item>906434</item>
+        <item>147943</item>
+        <item>783425</item>
+        <item>388053</item>
+        <item>986963</item>
+        <item>356431</item>
+        <item>873589</item>
+        <item>436434</item>
+        <item>967943</item>
+        <item>993425</item>
+        <item>766963</item>
+        <item>355641</item>
+        <item>847889</item>
+        <item>794743</item>
+        <item>815425</item>
+        <item>985763</item>
+        <item>356231</item>
+        <item>873489</item>
+        <item>436454</item>
+        <item>967443</item>
+        <item>993125</item>
+    </string-array>
+
     <string-array name="captain_task_title">
         <item>笑着和陈总握手并拍照，照片中要出现红色的物体</item>
         <item>通过任一社交平台和王瑞成为好友并对话，对话中要出现商业互捧</item>
@@ -156,6 +197,39 @@
         <item>010028</item>
         <item>010029</item>
         <item>010030</item>
+    </string-array>
+
+    <string-array name="team_task_code">
+        <item>765432</item>
+        <item>245234</item>
+        <item>897735</item>
+        <item>432249</item>
+        <item>904637</item>
+        <item>237845</item>
+        <item>259325</item>
+        <item>932835</item>
+        <item>725741</item>
+        <item>984457</item>
+        <item>058514</item>
+        <item>345615</item>
+        <item>246732</item>
+        <item>993346</item>
+        <item>278367</item>
+        <item>268835</item>
+        <item>369354</item>
+        <item>246373</item>
+        <item>846368</item>
+        <item>346836</item>
+        <item>125667</item>
+        <item>853578</item>
+        <item>247832</item>
+        <item>967316</item>
+        <item>188746</item>
+        <item>478436</item>
+        <item>567456</item>
+        <item>346892</item>
+        <item>987676</item>
+        <item>235623</item>
     </string-array>
 
     <string-array name="team_task_title">

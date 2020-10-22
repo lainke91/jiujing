@@ -40,6 +40,7 @@ public class TaskActivity extends BaseActivity {
         if(isCaptainTask) {
             String[] ids = getResources().getStringArray(R.array.captain_task_id);
             String[] titles = getResources().getStringArray(R.array.captain_task_title);
+            String[] codes=getResources().getStringArray(R.array.captain_task_code);
             TypedArray imgs = getResources().obtainTypedArray(R.array.captain_task_img);
             for(int i = 0; i < ids.length; i++){
                 dataList.add(new Task(ids[i], titles[i], imgs.getDrawable(i)));
@@ -47,6 +48,7 @@ public class TaskActivity extends BaseActivity {
         } else {
             String[] ids = getResources().getStringArray(R.array.team_task_id);
             String[] titles = getResources().getStringArray(R.array.team_task_title);
+            String[] coses=getResources().getStringArray(R.array.team_task_code);
             TypedArray imgs = getResources().obtainTypedArray(R.array.team_task_img);
             for(int i = 0; i < ids.length; i++){
                 dataList.add(new Task(ids[i], titles[i], imgs.getDrawable(i)));

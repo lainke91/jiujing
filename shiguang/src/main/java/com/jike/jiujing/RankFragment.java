@@ -39,7 +39,7 @@ public class RankFragment extends Fragment implements ScreenShotable {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         this.containerView = view.findViewById(R.id.container_rank);
-        String url = "https://www.baidu.com";
+        String url = "https://mychevyh5qa.cw.sgmlink.com/sharing/activity";
         mWebview = view.findViewById(R.id.wv_rank);
         mWebSettings = mWebview.getSettings();
         mWebSettings.setJavaScriptCanOpenWindowsAutomatically(true);//设置js可以直接打开窗口，如window.open()，默认为false
