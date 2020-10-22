@@ -37,7 +37,7 @@ public class ScoreDialog extends BaseDialog {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.dialog_name;
+        return R.layout.dialog_score;
     }
 
     @Override
@@ -46,13 +46,17 @@ public class ScoreDialog extends BaseDialog {
         setWidthPercent(0.8f);
     }
 
+    public void setMemberName(String name) {
+        tvTitle.setText(String.format("请为%s打分吧", name));
+    }
+
 
     @OnClick(R.id.btn_submit)
     public void onSumbitClick() {
         if (onSubmitClickListener != null) {
             String value = etInput.getText().toString();
             if (TextUtils.isEmpty(value) || TextUtils.isEmpty(value.trim())) {
-                ToastUtils.show( "请输入团队名称");
+                ToastUtils.show( "请输入分数");
                 return;
             }
             onSubmitClickListener.onSubmitClick(value);

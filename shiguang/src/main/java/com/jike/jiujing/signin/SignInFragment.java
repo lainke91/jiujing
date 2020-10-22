@@ -6,6 +6,7 @@ import android.graphics.Canvas;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -20,6 +21,7 @@ import com.jike.jiujing.common.entry.SignInActivity;
 import com.jike.jiujing.common.entry.SignInActivityList;
 import com.jike.jiujing.common.entry.SignInMember;
 import com.jike.jiujing.common.event.EnergyEvent;
+import com.jike.jiujing.common.param.ScoreParam;
 import com.jike.jiujing.common.param.SignInParam;
 import com.jike.jiujing.common.service.ApiLoader;
 import com.jike.jiujing.common.service.Callback;
@@ -170,15 +172,42 @@ public class SignInFragment extends BaseFragment implements ScreenShotable, Sign
 
     @Override
     public void onScoreClick(int activityPos, int memberPos) {
-//        SignInActivity activity = dataList.get(activityPos);
-//        SignInMember signInMember = activity.getMemberlist().get(memberPos);
-//        ScoreDialog dialog = new ScoreDialog(currentContext);
-//        dialog.setOnSubmitClickListener(new ScoreDialog.OnSubmitClickListener() {
-//            @Override
-//            public void onSubmitClick(String value) {
-//
-//            }
-//        });
+        CaptainUser user = App.getInstance().getUser();
+        if(!user.getTeamID().equals("0")) {
+            return;
+        }
+        final SignInActivity activity = dataList.get(activityPos);
+        final SignInMember signInMember = activity.getMemberlist().get(memberPos);
+        if(!TextUtils.isEmpty(signInMember.getScore())){
+            return;
+        }
+        ScoreDialog dialog = new ScoreDialog(currentContext);
+        dialog.setMemberName(signInMember.getMemberName());
+        dialog.setOnSubmitClickListener(new ScoreDialog.OnSubmitClickListener() {
+            @Override
+            public void onSubmitClick(final String value) {
+                ScoreParam param = new ScoreParam();
+                param.setActivityID(activity.getActivityID());
+                List<SignInMember> memberList = new ArrayList<>();
+
+                SignInMember tempMember = new SignInMember(signInMember.getMemberID());
+                tempMember.setTeamID(signInMember.getTeamID());
+                tempMember.setScore(value);
+                tempMember.setMemberName(signInMember.getMemberName());
+                memberList.add(tempMember);
+                param.setMemberList(memberList);
+                new ApiLoader().scoreActivity(param).subscribe(new Callback<ResultData>(){
+                    @Override
+                    public void onSuccess (ResultData result) {
+                        if(result.isSuccess()) {
+                            signInMember.setScore(value);
+                            adapter.notifyDataSetChanged();
+                        }
+                    }
+                });
+            }
+        });
+        dialog.show();
     }
 
     @Override

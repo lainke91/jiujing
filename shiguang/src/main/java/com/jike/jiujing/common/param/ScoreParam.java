@@ -9,4 +9,11 @@ public class ScoreParam {
     private String activityID;
     private List<SignInMember> memberList = new ArrayList<>();
 
+    public void setActivityID(String activityID) {
+        this.activityID = activityID;
+    }
+
+    public void setMemberList(List<SignInMember> memberList) {
+        this.memberList = memberList;
+    }
 }

@@ -6,6 +6,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.jike.jiujing.App;
 import com.jike.jiujing.R;
 import com.jike.jiujing.common.adapter.CommonAdapter;
 import com.jike.jiujing.common.adapter.ViewHolder;
@@ -53,7 +54,8 @@ public class SigninAdapter extends CommonAdapter<SignInActivity> {
                 }
             }
         });
-        if(data.getJoinSize() >= data.getCount()) {
+
+        if("0".equals(App.getInstance().getUser().getTeamID()) || data.getJoinSize() >= data.getCount()) {
             tvSignIn.setVisibility(View.GONE);
         } else {
             tvSignIn.setVisibility(View.VISIBLE);

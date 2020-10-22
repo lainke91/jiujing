@@ -8,6 +8,7 @@ public class SignInMember implements Serializable {
     private String score;
     private String memberName;
 
+
     public SignInMember(String memberID) {
         this.memberID = memberID;
     }
