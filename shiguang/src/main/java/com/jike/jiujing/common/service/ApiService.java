@@ -4,6 +4,8 @@ import com.jike.jiujing.common.entry.CaptainUser;
 import com.jike.jiujing.common.entry.ResultData;
 import com.jike.jiujing.common.entry.SignInActivityList;
 import com.jike.jiujing.common.param.LoginParam;
+import com.jike.jiujing.common.param.ScoreParam;
+import com.jike.jiujing.common.param.SignInParam;
 import com.jike.jiujing.common.param.TaskParam;
 
 import io.reactivex.Observable;
@@ -22,4 +24,11 @@ public interface ApiService {
 
     @POST("mychevy/rest/api/public/teamBuliding/getActivity")
     Observable<ResultData<SignInActivityList>> getActivity(@Body TaskParam param);
+
+    @POST("mychevy/rest/api/public/teamBuliding/joinActivity")
+    Observable<ResultData<CaptainUser>> joinActivity(@Body SignInParam param);
+
+    @POST("mychevy/rest/api/public/teamBuliding/scoreActivity")
+    Observable<ResultData> scoreActivity(@Body ScoreParam param);
+
 }

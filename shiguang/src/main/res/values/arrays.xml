@@ -364,4 +364,44 @@
         <item>第一场3：40   第二场4：20 第三场5：00</item>
     </string-array>
 
+    <integer-array name="activity_energy">
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>3</item>
+        <item>2</item>
+    </integer-array>
+
+
+    <integer-array name="activity_count">
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>100000</item>
+        <item>100000</item>
+        <item>100000</item>
+        <item>100000</item>
+        <item>2</item>
+        <item>1</item>
+        <item>2</item>
+        <item>1</item>
+        <item>1</item>
+        <item>6</item>
+    </integer-array>
 </resources>

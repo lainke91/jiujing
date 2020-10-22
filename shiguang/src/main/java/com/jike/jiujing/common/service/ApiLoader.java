@@ -5,6 +5,8 @@ import com.jike.jiujing.common.entry.CaptainUser;
 import com.jike.jiujing.common.entry.ResultData;
 import com.jike.jiujing.common.entry.SignInActivityList;
 import com.jike.jiujing.common.param.LoginParam;
+import com.jike.jiujing.common.param.ScoreParam;
+import com.jike.jiujing.common.param.SignInParam;
 import com.jike.jiujing.common.param.TaskParam;
 
 import io.reactivex.Observable;
@@ -38,8 +40,13 @@ public class ApiLoader {
         return observe(service.getActivity(param));
     }
 
+    public Observable<ResultData<CaptainUser>> joinActivity(SignInParam param) {
+        return observe(service.joinActivity(param));
+    }
 
-
+    public Observable<ResultData> scoreActivity(ScoreParam param) {
+        return observe(service.scoreActivity(param));
+    }
 
     protected <T> Observable<T> observe(Observable<T> observable){
         return observable

@@ -15,6 +15,10 @@ public class SignInActivity implements Serializable {
     private String activityState;
     private Drawable icon;
     private String time;
+    private int energy;
+    private int count;
+    private int joinSize;
+
     private List<SignInMember> memberlist = new ArrayList<>();
 
     public String getActivityID() {
@@ -93,5 +97,29 @@ public class SignInActivity implements Serializable {
             return "结束";
         }
         return "";
+    }
+
+    public int getEnergy() {
+        return energy;
+    }
+
+    public void setEnergy(int energy) {
+        this.energy = energy;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public int getJoinSize() {
+        return joinSize;
+    }
+
+    public void setJoinSize(int joinSize) {
+        this.joinSize = joinSize;
     }
 }

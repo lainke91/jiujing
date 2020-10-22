@@ -5,7 +5,6 @@ import android.content.Context;
 import com.jike.jiujing.R;
 import com.jike.jiujing.common.adapter.CommonAdapter;
 import com.jike.jiujing.common.adapter.ViewHolder;
-import com.jike.jiujing.common.entry.Score;
 import com.jike.jiujing.common.entry.SignInMember;
 
 import java.util.List;

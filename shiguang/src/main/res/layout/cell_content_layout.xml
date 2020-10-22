@@ -24,12 +24,12 @@
             android:textColor="@android:color/white"
             android:textSize="20sp" />
 
-        <TextView android:id="@+id/tv_content_status"
+        <TextView android:id="@+id/tv_content_signin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:text="状态"
+            android:text="报名"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
