@@ -8,4 +8,14 @@
         <attr name="cameraHeight" format="integer" />
     </declare-styleable>
 
+    <declare-styleable name="PasswordEditView">
+        <attr name="password_item_width" format="dimension"/>
+        <attr name="password_item_radius" format="dimension"/>
+        <attr name="password_item_background" format="color"/>
+        <attr name="password_item_margin" format="dimension"/>
+        <attr name="password_item_not_enable" format="color"/>
+        <attr name="password_item_text_size" format="dimension"/>
+        <attr name="password_item_text_color" format="integer"/>
+    </declare-styleable>
+
 </resources>

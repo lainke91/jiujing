@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
+import android.os.Handler;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -17,12 +18,21 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jike.jiujing.common.entry.CaptainUser;
+import com.jike.jiujing.common.entry.ResultData;
+import com.jike.jiujing.common.entry.SignInActivityList;
+import com.jike.jiujing.common.entry.Task;
+import com.jike.jiujing.common.event.EnergyEvent;
 import com.jike.jiujing.common.event.ExitEvent;
+import com.jike.jiujing.common.service.ApiLoader;
+import com.jike.jiujing.common.service.Callback;
 import com.jike.jiujing.common.utils.SPUtils;
 import com.jike.jiujing.signin.SignInFragment;
+import com.jike.jiujing.task.TaskActivity;
+import com.jike.jiujing.task.TaskAdapter;
 import com.jike.jiujing.task.TaskFragment;
 
 import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,6 +63,9 @@ public class ContentActivity extends AppCompatActivity implements ViewAnimator.V
         setTheme(R.style.MyTheme);
         setContentView(R.layout.activity_content);
         ButterKnife.bind(this);
+        if(!EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().register(this);
+        }
         TaskFragment taskFragment = TaskFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.content_frame, taskFragment)
@@ -73,7 +86,15 @@ public class ContentActivity extends AppCompatActivity implements ViewAnimator.V
 
         CaptainUser captainUser = App.getInstance().getUser();
         if(captainUser != null) {
-            tvEnergy.setText(String.format(Locale.getDefault(),"能量：%s", captainUser.getTeamEnergy()));
+            tvEnergy.setText(captainUser.getTeamEnergy());
+        }
+    }
+
+    @Subscribe
+    public void onEnergyEvent(EnergyEvent event) {
+        CaptainUser captainUser = App.getInstance().getUser();
+        if(captainUser != null) {
+            tvEnergy.setText(captainUser.getTeamEnergy());
         }
     }
 
@@ -155,7 +176,6 @@ public class ContentActivity extends AppCompatActivity implements ViewAnimator.V
         switch (item.getItemId()) {
             case R.id.action_settings:
                 App.getInstance().setUser(null);
-                SPUtils.setObjectValue(this, SPUtils.SP_LOGIN_DATA, null);
                 EventBus.getDefault().post(new ExitEvent());
                 finish();
                 return true;
@@ -189,7 +209,7 @@ public class ContentActivity extends AppCompatActivity implements ViewAnimator.V
 
             case ContentFragment.SIGNUP:
                 tvToolBar.setText("报名通道");
-                SignInFragment signInFragment=SignInFragment.newInstance();
+                SignInFragment signInFragment = SignInFragment.newInstance();
                 getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, signInFragment).commit();
                 return signInFragment;
 
@@ -233,6 +253,14 @@ public class ContentActivity extends AppCompatActivity implements ViewAnimator.V
     @Override
     public void addViewToContainer(View view) {
         linearLayout.addView(view);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if(EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().unregister(this);
+        }
     }
 }
 

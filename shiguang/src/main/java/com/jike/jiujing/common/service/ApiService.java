@@ -2,7 +2,9 @@ package com.jike.jiujing.common.service;
 
 import com.jike.jiujing.common.entry.CaptainUser;
 import com.jike.jiujing.common.entry.ResultData;
+import com.jike.jiujing.common.entry.SignInActivityList;
 import com.jike.jiujing.common.param.LoginParam;
+import com.jike.jiujing.common.param.TaskParam;
 
 import io.reactivex.Observable;
 import retrofit2.http.Body;
@@ -15,5 +17,9 @@ public interface ApiService {
     @POST("mychevy/rest/api/public/teamBuliding/changeName")
     Observable<ResultData> changeTeamName(@Body CaptainUser param);
 
+    @POST("mychevy/rest/api/public/teamBuliding/taskFinish")
+    Observable<ResultData<CaptainUser>> taskFinish(@Body TaskParam param);
 
+    @POST("mychevy/rest/api/public/teamBuliding/getActivity")
+    Observable<ResultData<SignInActivityList>> getActivity(@Body TaskParam param);
 }

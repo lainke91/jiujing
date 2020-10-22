@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/common_popup_frame"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="选择成员"
+            android:textColor="@color/text_key"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+<!--        <ImageView android:id="@+id/iv_close"-->
+<!--            android:layout_width="14dp"-->
+<!--            android:layout_height="14dp"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:src="@drawable/chevy_cartips_dialog_close"-->
+<!--            android:textColor="@color/primary_key"-->
+<!--            android:textSize="@dimen/ui_px_16" />-->
+
+
+    </RelativeLayout>
+
+    <ListView android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:listSelector="@android:color/transparent"/>
+</LinearLayout>

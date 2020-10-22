@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:visibility="gone">
 
@@ -15,7 +16,7 @@
         android:paddingRight="12dp"
         android:paddingTop="7dp">
 
-        <TextView
+        <TextView android:id="@+id/tv_content_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -23,7 +24,7 @@
             android:textColor="@android:color/white"
             android:textSize="20sp" />
 
-        <TextView
+        <TextView android:id="@+id/tv_content_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -33,13 +34,15 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/tv_content_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:src="@mipmap/ic_launcher" />
+            app:civ_border_overlay="true"
+            app:civ_circle_background_color="@android:color/white" />
 
     </RelativeLayout>
 
@@ -60,7 +63,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/content_avatar_title"
+                android:id="@+id/tv_content_desc"
                 style="@style/ContentMainBadgeTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -68,17 +71,6 @@
                 android:layout_alignParentStart="true"
                 android:layout_marginBottom="5dp"
                 android:text="游戏简介" />
-
-
-            <TextView
-                style="@style/ContentMainBadgeTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/content_avatar_title"
-                android:layout_marginBottom="5dp"
-                android:text="游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介游戏简介" />
 
         </RelativeLayout>
 
@@ -110,6 +102,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:textColor="@color/text_key"
+                    android:textStyle="bold"
                     android:text="姓名"/>
 
                 <TextView
@@ -118,6 +111,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:textColor="@color/text_key"
+                    android:textStyle="bold"
                     android:text="分数"/>
 
 

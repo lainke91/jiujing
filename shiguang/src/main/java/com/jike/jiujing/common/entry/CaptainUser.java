@@ -20,6 +20,14 @@ public class CaptainUser implements Serializable {
         this.teamName = teamName;
     }
 
+    public void setTeamEnergy(String teamEnergy) {
+        this.teamEnergy = teamEnergy;
+    }
+
+    public void setTeamLock(String teamLock) {
+        this.teamLock = teamLock;
+    }
+
     public String getTeamID() {
         return teamID;
     }

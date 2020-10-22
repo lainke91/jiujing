@@ -82,5 +82,6 @@ public class App extends Application {
 
     public void setUser(CaptainUser user) {
         this.user = user;
+        SPUtils.setObjectValue(this, SPUtils.SP_LOGIN_DATA, user);
     }
 }

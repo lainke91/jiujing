@@ -4,7 +4,7 @@
     xmlns:card_view="http://schemas.android.com/tools"
     android:id="@+id/cardView"
     android:layout_width="350dp"
-    android:layout_height="500dp"
+    android:layout_height="520dp"
     android:layout_gravity="center_horizontal"
     android:layout_marginTop="32dp"
     app:cardCornerRadius="10dp"
@@ -13,45 +13,49 @@
     app:cardUseCompatPadding="true"
     card_view:cardPreventCornerOverlap="false">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+
+        <TextView android:id="@+id/tv_task_id_key"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:text="ID："
+            android:textSize="24sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ID："
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/tv_task_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="010001"
-                android:textSize="24sp" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_task_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_task_id_key"
+            android:text="010001"
+            android:textSize="24sp" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iv_task_img"
             android:layout_width="260dp"
             android:layout_height="260dp"
+            android:layout_below="@+id/tv_task_id_key"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:layout_gravity="center"
             app:civ_border_overlay="true"
             app:civ_circle_background_color="@android:color/white" />
 
+        <ImageView android:id="@+id/iv_status"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/status_incomplete"/>
 
-        <LinearLayout
+
+        <LinearLayout android:id="@+id/ly_task_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_task_img"
             android:orientation="horizontal">
 
             <TextView
@@ -60,7 +64,8 @@
                 android:text="任务："
                 android:textSize="18sp" />
 
-            <TextView android:id="@+id/tv_task_title"
+            <TextView
+                android:id="@+id/tv_task_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -68,25 +73,22 @@
                 android:textSize="14sp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="状态："
-                android:textSize="18sp" />
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_below="@+id/ly_task_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_login"
+            android:text="去完成"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="已完成"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </android.support.v7.widget.CardView>

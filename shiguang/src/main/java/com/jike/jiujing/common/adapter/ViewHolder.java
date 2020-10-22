@@ -1,6 +1,7 @@
 package com.jike.jiujing.common.adapter;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.util.SparseArray;
@@ -74,6 +75,13 @@ public class ViewHolder {
         }
         return this;
     }
+
+    public ViewHolder setImageDrawable(int resId, Drawable drawable) {
+        ImageView iv = getView(resId);
+        iv.setImageDrawable(drawable);
+        return this;
+    }
+
 
     public ViewHolder setBackgroundColor(int resId, int color) {
         View v = getView(resId);

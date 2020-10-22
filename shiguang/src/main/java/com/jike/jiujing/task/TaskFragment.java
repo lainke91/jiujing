@@ -75,7 +75,8 @@ public class TaskFragment extends BaseFragment implements ScreenShotable {
     @OnClick(R.id.ly_team)
     public void onTeamClick() {
         String lock = App.getInstance().getUser().getTeamLock();
-        if("1".equals(lock)) {
+        String teamId = App.getInstance().getUser().getTeamID();
+        if("0".equals(teamId) || "1".equals(lock)) {
             TaskActivity.go(currentContext, false);
         } else {
             ToastUtils.show("请先完成队长任务");

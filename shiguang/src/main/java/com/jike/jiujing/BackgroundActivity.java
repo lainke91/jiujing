@@ -2,6 +2,7 @@ package com.jike.jiujing;
 
 import android.app.ActivityManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ConfigurationInfo;
 import android.opengl.GLSurfaceView;
 import android.os.Handler;
@@ -85,16 +86,19 @@ public class BackgroundActivity extends AppCompatActivity implements LoginFragme
 
     @Override
     public void onLoginClick() {
-        new Handler().post(new Runnable() {
-            @Override
-            public void run() {
-                getSupportFragmentManager().beginTransaction()
-                        .setCustomAnimations(R.anim.slide_upward, 0)
-                        .replace(R.id.container, GroupFragment.newInstance(), "group")
-                        .commit();
-            }
-        });
-
+        if("0".equals(App.getInstance().getUser().getTeamID())) {
+            startActivity(new Intent(this, ContentActivity.class));
+        } else {
+            new Handler().post(new Runnable() {
+                @Override
+                public void run() {
+                    getSupportFragmentManager().beginTransaction()
+                            .setCustomAnimations(R.anim.slide_upward, 0)
+                            .replace(R.id.container, GroupFragment.newInstance(), "group")
+                            .commit();
+                }
+            });
+        }
     }
 
     @Override

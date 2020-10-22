@@ -46,6 +46,10 @@ public class GroupFragment extends BaseFragment {
     protected void initView() {
         super.initView();
         CaptainUser captainUser = (CaptainUser)SPUtils.getObjectValue(currentContext, SPUtils.SP_LOGIN_DATA, CaptainUser.class);
+        if("0".equals(captainUser.getTeamID())) {
+            getActivity().finish();
+            startActivity(ContentActivity.class);
+        }
         if(!TextUtils.isEmpty(captainUser.getTeamName())){
             tvTeamName.setText(captainUser.getTeamName());
         }
@@ -79,7 +83,6 @@ public class GroupFragment extends BaseFragment {
             @Override
             public void onSuccess (ResultData result) {
                 if(result.isSuccess()) {
-                    SPUtils.setObjectValue(currentContext, SPUtils.SP_LOGIN_DATA, user);
                     App.getInstance().setUser(user);
                     tvTeamName.setText(teamName);
                     startActivity(ContentActivity.class);

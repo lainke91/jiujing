@@ -19,7 +19,6 @@
         <activity android:name=".ContentActivity"></activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".GameListActivity" />
-        <activity android:name=".signin.SigninActivity" />
         <activity android:name=".BackgroundActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

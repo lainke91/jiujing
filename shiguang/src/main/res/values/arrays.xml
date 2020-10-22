@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
+    <!-- 任务信息 -->
     <string-array name="captain_task_id">
         <item>000001</item>
         <item>000002</item>
@@ -296,8 +296,68 @@
         <item>@drawable/task010028</item>
         <item>@drawable/task010029</item>
         <item>@drawable/task010030</item>
-
     </array>
 
+    <!-- 报名信息 -->
+    <string-array name="activity_id">
+        <item>10001</item>
+        <item>10002</item>
+        <item>10003</item>
+        <item>10004</item>
+        <item>10005</item>
+        <item>10006</item>
+        <item>10007</item>
+        <item>20001</item>
+        <item>20001</item>
+        <item>20003</item>
+        <item>20004</item>
+        <item>30001</item>
+        <item>30002</item>
+        <item>30003</item>
+        <item>30004</item>
+        <item>30005</item>
+        <item>40001</item>
+    </string-array>
+
+
+    <string-array name="activity_img">
+        <item>@drawable/game1s</item>
+        <item>@drawable/game2s</item>
+        <item>@drawable/game3s</item>
+        <item>@drawable/game4s</item>
+        <item>@drawable/game5s</item>
+        <item>@drawable/game6s</item>
+        <item>@drawable/game7s</item>
+        <item>@drawable/game8s</item>
+        <item>@drawable/game9s</item>
+        <item>@drawable/game10s</item>
+        <item>@drawable/game11s</item>
+        <item>@drawable/game12s</item>
+        <item>@drawable/game13s</item>
+        <item>@drawable/game14s</item>
+        <item>@drawable/game15s</item>
+        <item>@drawable/game16s</item>
+        <item>@drawable/game17s</item>
+    </string-array>
+
+    <string-array name="activity_time">
+        <item>预计3：40开始</item>
+        <item>预计4：00开始</item>
+        <item>预计4：20开始</item>
+        <item>预计4：40开始</item>
+        <item>预计5：00开始</item>
+        <item>预计5：20开始</item>
+        <item>预计5：40开始</item>
+        <item>随时挑战</item>
+        <item>随时挑战</item>
+        <item>随时挑战</item>
+        <item>随时挑战</item>
+        <item>第一场3：40   第二场4：40</item>
+        <item>预计4：00开始</item>
+        <item>第一场4：20   第二次5：20</item>
+        <item>预计5：00开始</item>
+        <item>预计5：40开始</item>
+        <item>第一场3：40   第二场4：20 第三场5：00</item>
+    </string-array>
 
 </resources>
