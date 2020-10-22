@@ -17,9 +17,15 @@ public class ApiLoader {
         service = App.getInstance().getRetrofit().create(ApiService.class);
     }
 
-    public Observable<ResultData<CaptainUser>> login(LoginParam loginParam) {
-        return observe(service.login(loginParam));
+    public Observable<ResultData<CaptainUser>> login(LoginParam param) {
+        return observe(service.login(param));
     }
+
+
+    public Observable<ResultData> changeTeamName(CaptainUser param) {
+        return observe(service.changeTeamName(param));
+    }
+
 
     protected <T> Observable<T> observe(Observable<T> observable){
         return observable

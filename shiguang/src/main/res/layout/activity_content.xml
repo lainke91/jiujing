@@ -39,6 +39,16 @@
                 android:text="任务"
                 android:textColor="#000000"
                 android:textSize="20sp" />
+
+
+            <TextView android:id="@+id/tv_energy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="能量："
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
         </android.support.v7.widget.Toolbar>
 
     </io.codetail.widget.RevealFrameLayout>

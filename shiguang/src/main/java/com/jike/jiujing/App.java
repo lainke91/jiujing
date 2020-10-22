@@ -5,7 +5,9 @@ import android.content.Context;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.jike.jiujing.common.entry.CaptainUser;
 import com.jike.jiujing.common.service.LogInterceptor;
+import com.jike.jiujing.common.utils.SPUtils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,6 +30,8 @@ public class App extends Application {
 
     private Retrofit retrofit;
     private static String BASE_URL = "https://apigatewayqa.sgmlink.com:3221/service/";
+
+    private CaptainUser user;
 
     @Override
     public void onCreate() {
@@ -67,5 +71,16 @@ public class App extends Application {
 
     public Retrofit getRetrofit() {
         return retrofit;
+    }
+
+    public CaptainUser getUser() {
+        if(user == null) {
+            user = (CaptainUser) SPUtils.getObjectValue(this, SPUtils.SP_LOGIN_DATA, CaptainUser.class);
+        }
+        return user;
+    }
+
+    public void setUser(CaptainUser user) {
+        this.user = user;
     }
 }

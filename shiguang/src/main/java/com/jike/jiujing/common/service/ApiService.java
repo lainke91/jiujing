@@ -10,5 +10,10 @@ import retrofit2.http.POST;
 
 public interface ApiService {
     @POST("mychevy/rest/api/public/teamBuliding/login")
-    Observable<ResultData<CaptainUser>> login(@Body LoginParam loginParam);
+    Observable<ResultData<CaptainUser>> login(@Body LoginParam param);
+
+    @POST("mychevy/rest/api/public/teamBuliding/changeName")
+    Observable<ResultData> changeTeamName(@Body CaptainUser param);
+
+
 }

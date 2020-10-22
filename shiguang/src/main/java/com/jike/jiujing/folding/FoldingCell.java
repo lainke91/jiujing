@@ -294,7 +294,6 @@ public class FoldingCell extends RelativeLayout {
             // 1 - additional parts count is specified and it is not 0 - divide remained space
             int additionalPartHeight = additionalPartsTotalHeight / additionalFlipsCount;
             int remainingHeight = additionalPartsTotalHeight % additionalFlipsCount;
-            System.out.println(additionalPartsTotalHeight + " ++++++ " + additionalPartHeight + " +++++" + remainingHeight + " +++++ " + titleViewHeight + "+++++" + additionalFlipsCount);
             if (additionalPartHeight + remainingHeight > titleViewHeight)
                 throw new IllegalStateException("Additional flips count is too small");
             for (int i = 0; i < additionalFlipsCount; i++)

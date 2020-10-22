@@ -11,6 +11,7 @@ import com.jike.jiujing.common.entry.ResultData;
 import com.jike.jiujing.common.param.LoginParam;
 import com.jike.jiujing.common.service.ApiLoader;
 import com.jike.jiujing.common.service.Callback;
+import com.jike.jiujing.common.utils.SPUtils;
 import com.jike.jiujing.common.utils.ToastUtils;
 
 
@@ -47,28 +48,29 @@ public class LoginFragment extends BaseFragment {
 
     @OnClick(R.id.button_login)
     void onClick() {
-        listener.onLoginClick();
+//        listener.onLoginClick();
 
-//        String account = tvAccount.getText().toString();
-//        String password = tvPassword.getText().toString();
-//        if(TextUtils.isEmpty(account)){
-//            ToastUtils.show("请输入账号");
-//            return;
-//        }
-//        if(TextUtils.isEmpty(password)){
-//            ToastUtils.show("请输入密码");
-//            return;
-//        }
-//        LoginParam loginParam = new LoginParam(account, password);
-//        new ApiLoader().login(loginParam).subscribe(new Callback<ResultData<CaptainUser>>(){
-//            @Override
-//            public void onSuccess (ResultData<CaptainUser> result) {
-//                if(result.isSuccess()) {
-//                    listener.onLoginClick();
-//                } else {
-//                    ToastUtils.show(result.getMessage());
-//                }
-//            }
-//        });
+        String account = tvAccount.getText().toString();
+        String password = tvPassword.getText().toString();
+        if(TextUtils.isEmpty(account)){
+            ToastUtils.show("请输入账号");
+            return;
+        }
+        if(TextUtils.isEmpty(password)){
+            ToastUtils.show("请输入密码");
+            return;
+        }
+        LoginParam loginParam = new LoginParam(account, password);
+        new ApiLoader().login(loginParam).subscribe(new Callback<ResultData<CaptainUser>>(){
+            @Override
+            public void onSuccess (ResultData<CaptainUser> result) {
+                if(result.isSuccess()) {
+                    SPUtils.setObjectValue(currentContext, SPUtils.SP_LOGIN_DATA, result.getData());
+                    listener.onLoginClick();
+                } else {
+                    ToastUtils.show(result.getMessage());
+                }
+            }
+        });
     }
 }

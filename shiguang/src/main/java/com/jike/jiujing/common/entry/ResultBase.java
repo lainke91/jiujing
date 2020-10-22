@@ -1,5 +1,7 @@
 package com.jike.jiujing.common.entry;
 
+import com.jike.jiujing.common.utils.ToastUtils;
+
 import java.io.Serializable;
 
 public class ResultBase implements Serializable {
@@ -13,6 +15,10 @@ public class ResultBase implements Serializable {
     }
 
     public boolean isSuccess() {
-        return SUCCESS_CODE.equals(resultCode);
+        if(SUCCESS_CODE.equals(resultCode)){
+            return true;
+        }
+        ToastUtils.show(message);
+        return false;
     }
 }

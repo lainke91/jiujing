@@ -16,12 +16,20 @@ import android.view.animation.AccelerateInterpolator;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.jike.jiujing.common.entry.CaptainUser;
+import com.jike.jiujing.common.event.ExitEvent;
+import com.jike.jiujing.common.utils.SPUtils;
 import com.jike.jiujing.signin.SignInFragment;
 import com.jike.jiujing.task.TaskFragment;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import io.codetail.animation.ViewAnimationUtils;
 import yalantis.com.sidemenu.interfaces.Resourceble;
 import yalantis.com.sidemenu.interfaces.ScreenShotable;
@@ -37,12 +45,14 @@ public class ContentActivity extends AppCompatActivity implements ViewAnimator.V
     private LinearLayout linearLayout;
     private TextView tvToolBar;
 
+    @BindView(R.id.tv_energy) TextView tvEnergy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTheme(R.style.MyTheme);
         setContentView(R.layout.activity_content);
+        ButterKnife.bind(this);
         TaskFragment taskFragment = TaskFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.content_frame, taskFragment)
@@ -57,10 +67,14 @@ public class ContentActivity extends AppCompatActivity implements ViewAnimator.V
             }
         });
 
-
         setActionBar();
         createMenuList();
         viewAnimator = new ViewAnimator<>(this, list, taskFragment, drawerLayout, this);
+
+        CaptainUser captainUser = App.getInstance().getUser();
+        if(captainUser != null) {
+            tvEnergy.setText(String.format(Locale.getDefault(),"能量：%s", captainUser.getTeamEnergy()));
+        }
     }
 
     private void createMenuList() {
@@ -140,6 +154,10 @@ public class ContentActivity extends AppCompatActivity implements ViewAnimator.V
         }
         switch (item.getItemId()) {
             case R.id.action_settings:
+                App.getInstance().setUser(null);
+                SPUtils.setObjectValue(this, SPUtils.SP_LOGIN_DATA, null);
+                EventBus.getDefault().post(new ExitEvent());
+                finish();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

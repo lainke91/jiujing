@@ -8,7 +8,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.jike.jiujing.R;
+import com.jike.jiujing.common.entry.Member;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,27 +18,30 @@ import java.util.List;
  */
 public class NameAdapter extends RecyclerView.Adapter<NameAdapter.ViewHolder> {
 
-    private List<String> mNameList;
+    private List<Member> dataList = new ArrayList<>();
 
+    public NameAdapter(List<Member> dataList) {
+        this.dataList = dataList;
+    }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view= LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.name_iteam,viewGroup,false);
-        ViewHolder holder=new ViewHolder(view);
+        ViewHolder holder = new ViewHolder(view);
         return holder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
-        String name=mNameList.get(position);
+        String name = dataList.get(position).getMemberName();
         viewHolder.name.setText(name);
 
     }
 
     @Override
     public int getItemCount() {
-        return mNameList.size();
+        return dataList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -44,11 +49,9 @@ public class NameAdapter extends RecyclerView.Adapter<NameAdapter.ViewHolder> {
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            name=itemView.findViewById(R.id.tv_name);
+            name = itemView.findViewById(R.id.tv_name);
         }
     }
 
-    public NameAdapter(List<String>nameList){
-        mNameList=nameList;
-    }
+
 }

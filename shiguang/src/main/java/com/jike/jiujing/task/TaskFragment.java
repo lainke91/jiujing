@@ -7,8 +7,11 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.View;
 
+import com.jike.jiujing.App;
 import com.jike.jiujing.R;
 import com.jike.jiujing.base.BaseFragment;
+import com.jike.jiujing.common.entry.CaptainUser;
+import com.jike.jiujing.common.utils.ToastUtils;
 
 import butterknife.OnClick;
 import yalantis.com.sidemenu.interfaces.ScreenShotable;
@@ -71,6 +74,11 @@ public class TaskFragment extends BaseFragment implements ScreenShotable {
 
     @OnClick(R.id.ly_team)
     public void onTeamClick() {
-        TaskActivity.go(currentContext, false);
+        String lock = App.getInstance().getUser().getTeamLock();
+        if("1".equals(lock)) {
+            TaskActivity.go(currentContext, false);
+        } else {
+            ToastUtils.show("请先完成队长任务");
+        }
     }
 }
