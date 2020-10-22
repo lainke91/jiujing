@@ -39,16 +39,23 @@ public class TaskAdapter extends CommonAdapter<Task> {
     }
 
     @Override
-    public void convert(ViewHolder holder, Task data, final int pos) {
+    public void convert(ViewHolder holder, final Task data, final int pos) {
         holder.setText(R.id.tv_task_id, data.getTaskId())
                 .setText(R.id.tv_task_title, data.getTaskTitle())
                 .setImageDrawable(R.id.iv_task_img, data.getTaskImg());
 
 
-        Button btnSubmit = holder.getView(R.id.btn_submit);
+        final Button btnSubmit = holder.getView(R.id.btn_submit);
         if("0".equals(teamId)) {
             btnSubmit.setVisibility(View.VISIBLE);
-            btnSubmit.setText(String.format("任务码：%s", data.getPassword()));
+            btnSubmit.setText("任务码");
+            btnSubmit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    btnSubmit.setText(String.format("任务码：%s", data.getPassword()));
+                }
+            });
+
             holder.setShow(R.id.iv_status, false);
         } else {
             btnSubmit.setText("去完成");

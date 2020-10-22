@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.view.View;
+import android.widget.Toast;
 
 import com.jike.jiujing.App;
 import com.jike.jiujing.ContentActivity;
@@ -18,6 +19,7 @@ import com.jike.jiujing.common.param.TaskParam;
 import com.jike.jiujing.common.service.ApiLoader;
 import com.jike.jiujing.common.service.Callback;
 import com.jike.jiujing.common.utils.SPUtils;
+import com.jike.jiujing.common.utils.ToastUtils;
 import com.jike.jiujing.common.view.PasswordDialog;
 import com.jike.jiujing.common.view.PasswordEditView;
 import com.yalantis.library.Koloda;
@@ -117,6 +119,8 @@ public class TaskActivity extends BaseActivity implements TaskAdapter.OnSubmitCl
                     @Override
                     public void onSuccess (ResultData<CaptainUser> result) {
                         if(result.isSuccess()) {
+                            ToastUtils.show("恭喜您完成任务，体力值+1");
+                            //Toast.makeText(getApplicationContext(),"恭喜您完成任务，体力值+1",Toast.LENGTH_LONG).show();
                             dialog.dismiss();
                             if(user.getTask() != null) {
                                 for (Task item : user.getTask()) {

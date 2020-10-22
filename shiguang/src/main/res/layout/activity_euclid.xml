@@ -24,14 +24,15 @@
         android:id="@+id/list_view"
 
         android:layout_below="@+id/toolbar_list"
-        android:background="@color/line_grey"
+        android:background="@color/japanblue"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:footerDividersEnabled="false"
         tools:listitem="@layout/euclid_list_item" />
 
     <RelativeLayout
         android:id="@+id/toolbar_profile"
-        android:background="@color/line_grey"
+        android:background="@color/japanblue"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="50dp"

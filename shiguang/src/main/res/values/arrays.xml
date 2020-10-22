@@ -345,23 +345,23 @@
     </string-array>
 
     <string-array name="activity_time">
-        <item>预计3：40开始</item>
-        <item>预计4：00开始</item>
-        <item>预计4：20开始</item>
-        <item>预计4：40开始</item>
-        <item>预计5：00开始</item>
-        <item>预计5：20开始</item>
-        <item>预计5：40开始</item>
+        <item>预计3:40开始</item>
+        <item>预计4:00开始</item>
+        <item>预计4:20开始</item>
+        <item>预计4:40开始</item>
+        <item>预计5:00开始</item>
+        <item>预计5:20开始</item>
+        <item>预计5:40开始</item>
         <item>随时挑战</item>
         <item>随时挑战</item>
         <item>随时挑战</item>
         <item>随时挑战</item>
-        <item>第一场3：40   第二场4：40</item>
-        <item>预计4：00开始</item>
-        <item>第一场4：20   第二次5：20</item>
-        <item>预计5：00开始</item>
-        <item>预计5：40开始</item>
-        <item>第一场3：40   第二场4：20 第三场5：00</item>
+        <item>第1场3:40  第2场4:40</item>
+        <item>预计4:00开始</item>
+        <item>第1场4:20  第2场5:20</item>
+        <item>预计5:00开始</item>
+        <item>预计5:40开始</item>
+        <item>第1场3:40  第2场4:20  第3场5:00</item>
     </string-array>
 
     <integer-array name="activity_energy">

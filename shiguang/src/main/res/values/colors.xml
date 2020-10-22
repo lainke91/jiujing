@@ -22,6 +22,8 @@
     <color name="black">#000000</color>
     <color name="blue">#ff14445a</color>
 
+    <color name="japanblue">#C8C8A9</color>
+
 
 
 
@@ -144,7 +146,7 @@
 
     <color name="black_overlay">#66000000</color>
 
-    <color name="euclid_background">#ffbc9a</color>
+    <color name="euclid_background">#F9CDAD</color>
 </resources>
 
 

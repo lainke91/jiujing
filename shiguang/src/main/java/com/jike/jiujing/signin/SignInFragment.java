@@ -25,6 +25,7 @@ import com.jike.jiujing.common.param.ScoreParam;
 import com.jike.jiujing.common.param.SignInParam;
 import com.jike.jiujing.common.service.ApiLoader;
 import com.jike.jiujing.common.service.Callback;
+import com.jike.jiujing.common.utils.ToastUtils;
 import com.jike.jiujing.folding.FoldingCell;
 
 import org.greenrobot.eventbus.EventBus;
@@ -153,6 +154,7 @@ public class SignInFragment extends BaseFragment implements ScreenShotable, Sign
                             @Override
                             public void onSuccess (ResultData<CaptainUser> result) {
                                 if(result.isSuccess()) {
+                                    ToastUtils.show("报名成功！");
                                     user.setTeamEnergy(result.getData().getTeamEnergy());
                                     App.getInstance().setUser(user);
                                     EventBus.getDefault().post(new EnergyEvent());
@@ -200,6 +202,7 @@ public class SignInFragment extends BaseFragment implements ScreenShotable, Sign
                     @Override
                     public void onSuccess (ResultData result) {
                         if(result.isSuccess()) {
+                            ToastUtils.show("提交成功");
                             signInMember.setScore(value);
                             adapter.notifyDataSetChanged();
                         }
