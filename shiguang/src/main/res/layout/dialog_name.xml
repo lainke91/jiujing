@@ -16,7 +16,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:text="为团队取一个名字吧"
-        android:textColor="@android:color/white"
+        android:textColor="@color/text_key"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -37,7 +37,7 @@
             android:maxLength="10"
             android:maxLines="1"
             android:padding="5dp"
-            android:textColor="#DDDDDD"
+            android:textColor="@color/text_value"
             android:textSize="14sp" />
 
     </android.support.design.widget.TextInputLayout>
@@ -50,7 +50,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/button_login"
         android:text="确定"
-        android:textColor="@android:color/white"
+        android:textColor="@color/text_key"
         android:textSize="16sp" />
 
 </LinearLayout>
